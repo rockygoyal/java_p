@@ -154,15 +154,7 @@
                 <hr class="divider" />
                 <div class="clearfix"></div>
                 <!--- Divider -->
-                <div id="sidebar-menu">
-                    <ul><li class='has_sub'><a href="dashboard.jsp"><i class='icon-home-3'></i><span>Dashboard</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-feather'></i><span>ENTRY</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='alerts.html'><span>CREATE CHALLAN</span></a></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-pencil-3'></i><span>REPORTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='forms.html'><span>Commision</span></a></li><li><a href='advanced-forms.html'><span>CARD</span></a></li><li><a href='form-wizard.html'><span>N.G</span></a></li><li><a href='form-validation.html'><span>BALANCE</span></a></li><li><a href='form-uploads.html'><span>ADVANCE</span></a></li><li><a href='form-uploads.html'><span>DIFFERENCE</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-table'></i><span>PIE CHARTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='tables.html'><span>PROFIT/LOSS</span></a></li><li><a href='datatables.html'><span>EXPENSES</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-map-marker'></i><span>MASTERS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='google-maps.html'><span>******</span></a></li><li><a href='vector-maps.html'><span>******</span></a></li></ul></li>
-                        
-                    </ul>                    <div class="clearfix"></div>
-                </div>
+                   <%@include file="menu.jsp" %>
             <div class="clearfix"></div>
             
             <div class="clearfix"></div><br><br><br>
@@ -185,6 +177,94 @@
 		  <li><a href="#settings" data-toggle="tab" title="Preferences"><i class="icon-wrench"></i></a></li>
 		</ul>
 		<div class="clearfix"></div>
+                <div class="md-modal md-slide-stick-top" id="form-modal">
+		<div class="md-content">
+		<div class="md-close-btn"><a class="md-close"><i class="fa fa-times"></i></a></div>
+			<h3><strong>CHECK BALANCE BY DATE</strong></h3>
+			<div>
+				<div class="row">
+					<div class="col-sm-6">
+					
+						<form role="form">
+                                                    
+                                                    <div class="form-group">
+							<label class="control-label">FROM DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+                                                          <label class="control-label">TO DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+							
+						  </div>
+
+						  
+						  <button type="submit" class="btn btn-default">SEARCH</button>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+                 <div class="md-modal md-slide-stick-top" id="form-modal2">
+		<div class="md-content">
+		<div class="md-close-btn"><a class="md-close"><i class="fa fa-times"></i></a></div>
+			<h3><strong>CHECK BALANCE BY TRANPORT NAME</strong></h3>
+			<div>
+				<div class="row">
+					<div class="col-sm-6">
+					
+						<form role="form">
+                                                    <div class="form-group">
+						  <select class="form-control text-input">
+                                                    <option selected="">SELECT TRANSPORT</option>
+                                                </select>
+                                                    </div>
+                                                    <div class="form-group">
+							<label class="control-label">FROM DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+                                                          <label class="control-label">TO DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+							
+						  </div>
+
+						  
+						  <button type="submit" class="btn btn-default">SEARCH</button>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+                 <div class="md-modal md-slide-stick-top" id="form-modal3">
+		<div class="md-content">
+		<div class="md-close-btn"><a class="md-close"><i class="fa fa-times"></i></a></div>
+			<h3><strong>CHECK BALANCE BY LORRY NUMBER</strong></h3>
+			<div>
+				<div class="row">
+					<div class="col-sm-6">
+					
+						<form role="form">
+						  <div class="form-group">
+						  <select class="form-control text-input">
+                                                    <option selected="">SELECT LORRY NO.</option>
+                                                </select>
+                                                    </div>
+                                                    <div class="form-group">
+							<label class="control-label">FROM DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+                                                          <label class="control-label">TO DATE</label>
+							  <input type="text" class="form-control datepicker-input">
+							
+						  </div>
+						 
+						  <button type="submit" class="btn btn-default">SEARCH</button>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 <!--		<div class="tab-content">
 			<div class="tab-pane active" id="feed">
 				<div class="tab-inner slimscroller">
@@ -383,25 +463,26 @@
 			<!-- ============================================================== -->
 			<!-- Start Content here -->
 			<!-- ============================================================== -->
-            <div class="content">
+                          <div class="content">
 								<!-- Page Heading Start -->
 				<div class="page-heading">
-            		<h1><i class='fa fa-table'></i>BALANCE</h1>
-            		<h3>VIEW ALL YOUR BALANCE DETAILS</h3>            	</div>
+            		      <h1><i class='fa fa-table'></i>BALANCE</h1>
+                              <h3>VIEW ALL YOUR BALANCE DETAILS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary md-trigger" data-modal="form-modal">TO DATE</a>
+                              <a class="btn btn-primary md-trigger" data-modal="form-modal2">BY TRANSPORT</a>
+                              <a class="btn btn-primary md-trigger" data-modal="form-modal3">BY LORRY NO.</a>
+                              
+                              
+                              
+                              </h3> 
+						  
+                                </div>
             	<!-- Page Heading End-->				<!-- Your awesome content goes here -->
 				
 				<div class="row">
 				
 					<div class="col-md-12">
 						<div class="widget">
-							<div class="widget-header">
-								<h2><strong></strong></h2>
-								<div class="additional-btn">
-									<a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-									<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-									<a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-								</div>
-							</div>
+							
 							<div class="widget-content">
 							<br>					
 								<div class="table-responsive">
@@ -409,12 +490,11 @@
 									<table id="datatables-3" class="table table-striped table-bordered" cellspacing="0" width="100%">
 								        <thead>
 								            <tr>
-								                
+								                <th>CHALLAN NO:</th>
 								                <th>DATE:</th>
-								                
-								                <th>AMOUNT</th>
                                                                                 <th>LORRY NO:</th>
                                                                                 <th>TRANSPORT NAME</th>
+                                                                                <th>BALANCE:</th>
 								            </tr>
 								        </thead>
 								 
@@ -426,42 +506,7 @@
 								        </tfoot>
 								 
                                                                         <tbody>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
-                                                                             <tr>
-								                <td>12/12/2016</td>
-								                <td>RS 35000</td>
-                                                                                <td>wb12A1234</td>
-                                                                                <td>gujarat roadways</td>
-								            </tr>
+                                                                            
                                                                         </tbody>
 								    </table>
 									</form>
