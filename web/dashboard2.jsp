@@ -182,15 +182,7 @@
                 <hr class="divider" />
                 <div class="clearfix"></div>
                 <!--- Divider -->
-<div id="sidebar-menu">
-                    <ul><li class='has_sub'><a href="dashboard.jsp"><i class='icon-home-3'></i><span>Dashboard</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-feather'></i><span>ENTRY</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='alerts.html'><span>CREATE CHALLAN</span></a></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-pencil-3'></i><span>REPORTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='forms.html'><span>Commision</span></a></li><li><a href='advanced-forms.html'><span>CARD</span></a></li><li><a href='form-wizard.html'><span>N.G</span></a></li><li><a href='form-validation.html'><span>BALANCE</span></a></li><li><a href='form-uploads.html'><span>ADVANCE</span></a></li><li><a href='form-uploads.html'><span>DIFFERENCE</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-table'></i><span>PIE CHARTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='tables.html'><span>PROFIT/LOSS</span></a></li><li><a href='datatables.html'><span>EXPENSES</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-map-marker'></i><span>MASTERS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='google-maps.html'><span>******</span></a></li><li><a href='vector-maps.html'><span>******</span></a></li></ul></li>
-                        
-                    </ul>                    <div class="clearfix"></div>
-                </div>
+ <%@include file="menu.jsp" %>
            
            
            

@@ -329,15 +329,7 @@
                 <hr class="divider" />
                 <div class="clearfix"></div>
                 <!--- Divider -->
-<div id="sidebar-menu">
-                    <ul><li class='has_sub'><a href="dashboard.jsp"><i class='icon-home-3'></i><span>Dashboard</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-feather'></i><span>ENTRY</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='alerts.html'><span>CREATE CHALLAN</span></a></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-pencil-3'></i><span>REPORTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='forms.html'><span>Commision</span></a></li><li><a href='advanced-forms.html'><span>CARD</span></a></li><li><a href='form-wizard.html'><span>N.G</span></a></li><li><a href='form-validation.html'><span>BALANCE</span></a></li><li><a href='form-uploads.html'><span>ADVANCE</span></a></li><li><a href='form-uploads.html'><span>DIFFERENCE</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-table'></i><span>PIE CHARTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='tables.html'><span>PROFIT/LOSS</span></a></li><li><a href='datatables.html'><span>EXPENSES</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-map-marker'></i><span>MASTERS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='google-maps.html'><span>******</span></a></li><li><a href='vector-maps.html'><span>******</span></a></li></ul></li>
-                        
-                    </ul>                    <div class="clearfix"></div>
-                </div>
+ <%@include file="menu.jsp" %>
             <div class="clearfix"></div>
             <div class="portlets">
 <!--                <div id="chat_groups" class="widget transparent nomargin">
@@ -412,19 +404,19 @@
                                                     <div class="form-group">
 							<label class="col-sm-2 control-label">DATE:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control datepicker-input" data-mask="9999-99-99" placeholder="yyyy-mm-dd">
+							  <input type="text" class="form-control datepicker-input" data-mask="9999-99-99" placeholder="yyyy-mm-dd" name="ch_date" id="ch_dates">
 							</div>
 						  </div>
 						  <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">LORRY NO:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="LORRY NO">
+							  <input type="text" class="form-control" id="input-text" placeholder="LORRY NO" name="ch_lorryno" id="ch_lorrynos">
 							</div>
 						  </div>
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">TRANSPORT NAME:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="TRANSPORT NAME">
+							  <input type="text" class="form-control" id="input-text" placeholder="TRANSPORT NAME" name="ch_transname" id="ch_transnames">
 							</div>
 						  </div>
 						  <div class="form-group">
@@ -432,7 +424,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line1">
+								  <input type="text" class="form-control" placeholder="Address line1" name="ch_ladd1" id="ch_ladds1" >
 								</div>
 							</div>
 						  </div>
@@ -441,7 +433,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line2">
+								  <input type="text" class="form-control" placeholder="Address line2" name="ch_ladd2" id="ch_ladds2">
 								</div>
 							</div>
 						  </div>
@@ -450,7 +442,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line 3">
+								  <input type="text" class="form-control" placeholder="Address line 3" name="ch_ladd3" id="ch_ladds3">
 								</div>
 							</div>
 						  </div>
@@ -459,7 +451,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line1">
+								  <input type="text" class="form-control" placeholder="Address line1" name="ch_uadd1" id="ch_uadds1">
 								</div>
 							</div>
 						  </div>
@@ -468,7 +460,7 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line2">
+								  <input type="text" class="form-control" placeholder="Address line2" name="ch_uadd2" id="ch_uadds2">
 								</div>
 							</div>
 						  </div>
@@ -477,14 +469,14 @@
 							<div class="col-sm-10">
 								<div class="input-group">
 								  <span class="input-group-addon">@</span>
-								  <input type="text" class="form-control" placeholder="Address line 3">
+								  <input type="text" class="form-control" placeholder="Address line 3" name="ch_uadd3" id="ch_uadds3">
 								</div>
 							</div>
 						  </div>
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">PHONE NO. OF LORRY DRIVER/OWNER:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="PHONE NO. OF LORRY DRIVER/OWNER">
+							  <input type="text" class="form-control" id="input-text" placeholder="PHONE NO. OF LORRY DRIVER/OWNER" name="ch_phno" id="ch_phnos">
 							</div>
 						  </div>
                                                     <div class="form-group">
@@ -492,13 +484,13 @@
 							<div class="col-sm-10">
 								<div class="row">
 								  <div class="col-xs-2">
-									<input type="text" class="form-control" placeholder="WEIGHT">
+									<input type="text" class="form-control" placeholder="WEIGHT" name="ch_weight" id="ch_weights">
 								  </div>
 								  <div class="col-xs-3">
-									<input type="text" class="form-control" placeholder="RATE">
+									<input type="text" class="form-control" placeholder="RATE" name="ch_rate" id="ch_rates">
 								  </div>
 								  <div class="col-xs-4">
-									<input type="text" class="form-control" placeholder="EMPO">
+									<input type="text" class="form-control" placeholder="EMPO" name="ch_empo" id="ch_empos">
 								  </div>
 								</div>
 							</div>
@@ -507,25 +499,25 @@
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">TOTAL FREIGHT:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="TOTAL FREIGHT:">
+							  <input type="text" class="form-control" id="input-text" placeholder="TOTAL FREIGHT:" name="ch_freight" id="ch_freights">
 							</div>
 						  </div>
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">ACC NO. OF LORRY OWNER:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="ACC NO. OF LORRY OWNER">
+							  <input type="text" class="form-control" id="input-text" placeholder="ACC NO. OF LORRY OWNER" name="ch_acc" id="ch_accs">
 							</div>
 						  </div>
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">ADVANCE:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="ADVANCE">
+							  <input type="text" class="form-control" id="input-text" placeholder="ADVANCE" name="ch_advance" id="ch_advances">
 							</div>
 						  </div>
                                                     <div class="form-group">
 							<label for="input-text" class="col-sm-2 control-label">TO PAY:</label>
 							<div class="col-sm-3">
-							  <input type="text" class="form-control" id="input-text" placeholder="TO PAY">
+							  <input type="text" class="form-control" id="input-text" placeholder="TO PAY" name="ch_topay" id="ch_topays">
 							</div>
 						  </div>
 						 
@@ -538,7 +530,7 @@
 						  <div class="form-group">
 							<label class="col-sm-2 control-label">RC BOOK PHOTO:</label>
 							<div class="col-sm-10">
-							  <input type="file" class="btn btn-default" title="Select file">
+							  <input type="file" class="btn btn-default" title="Select file" name="ch_rcbook" id="rcbooks">
 							</div>
 						  </div>
                                                     <div class="form-group">
@@ -547,7 +539,7 @@
 							  <input type="file" class="btn btn-default" title="Select file">
 							</div>
 						  </div>
-                                                    <input type="submit" class="btn btn-default" value="SUBMIT" style="align-content: center">
+                                                    <input type="submit" class="btn btn-default" value="SUBMIT" style="align-content: center" name="ch_dl" id="ch_dls">
                                                     
 						  
 						  

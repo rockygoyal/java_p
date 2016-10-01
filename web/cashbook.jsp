@@ -186,15 +186,7 @@
                 <hr class="divider" />
                 <div class="clearfix"></div>
                 <!--- Divider -->
-                 <div id="sidebar-menu">
-                    <ul><li class='has_sub'><a href="dashboard.jsp"><i class='icon-home-3'></i><span>Dashboard</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-feather'></i><span>ENTRY</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='alerts.html'><span>CREATE CHALLAN</span></a></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='icon-pencil-3'></i><span>REPORTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='forms.html'><span>Commision</span></a></li><li><a href='advanced-forms.html'><span>CARD</span></a></li><li><a href='form-wizard.html'><span>N.G</span></a></li><li><a href='form-validation.html'><span>BALANCE</span></a></li><li><a href='form-uploads.html'><span>ADVANCE</span></a></li><li><a href='form-uploads.html'><span>DIFFERENCE</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-table'></i><span>PIE CHARTS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='tables.html'><span>PROFIT/LOSS</span></a></li><li><a href='datatables.html'><span>EXPENSES</span></a></li></ul></li>
-                        <li class='has_sub'><a href='javascript:void(0);'><i class='fa fa-map-marker'></i><span>MASTERS</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href='google-maps.html'><span>******</span></a></li><li><a href='vector-maps.html'><span>******</span></a></li></ul></li>
-                        
-                    </ul>                    <div class="clearfix"></div>
-                </div>
+                 <%@include file="menu.jsp" %>
            
            
            
@@ -270,26 +262,26 @@
                 <form>
                                                    <div class="form-group">
 												<label for="inputEmail">CHALLAN NO:</label>
-												<input type="text" id="inputEmail" placeholder="ENTER CHALLAN NUMBER" class="form-control">
+												<input type="text" id="inputEmail" placeholder="ENTER CHALLAN NUMBER" class="form-control" name="cb_challanno" id="cb_challannos">
 											</div>
                                                                                          <div class="form-group">
 							                                        <label class="col-sm-2 control-label">DATE:</label>
 							                                       
-							                                         <input type="text" class="form-control datepicker-input" data-mask="9999-99-99" placeholder="yyyy-mm-dd">
+							                                         <input type="text" class="form-control datepicker-input" data-mask="9999-99-99" placeholder="yyyy-mm-dd" name="cb_date" id="cb_dates">
 							                                      
 						                                            </div>
                                                                                     <div class="form-group">
 												<label for="inputEmail">LORRY NO:</label>
-												<input type="text" id="inputEmail" placeholder="ENTER LORRY NUMBER" class="form-control">
+												<input type="text" id="inputEmail" placeholder="ENTER LORRY NUMBER" class="form-control" name="cb_lorryno" id="cb_lorrynos">
 											</div>
                                                                                     <div class="form-group">
 												<label for="inputEmail">TRANSPORT NAME:</label>
-												<input type="text" id="inputEmail" placeholder="ENTER LORRY NUMBER" class="form-control">
+												<input type="text" id="inputEmail" placeholder="ENTER TRANSPORT NUMBER" class="form-control" name="cb_transname" id="cb_transnames">
 											</div>
                                                                                    
                                                                                     <div class="form-group">
 												<label for="inputEmail">AMOUNT:</label>
-												<input type="text" id="inputEmail" placeholder="ENTER AMOUNT" class="form-control">
+												<input type="text" id="inputEmail" placeholder="ENTER AMOUNT" class="form-control" name="cb_ch_amount" id="cb_ch_amounts">
 											</div>
 											
                                                                                     <button type="submit" class="btn btn-default">Submit</button>
